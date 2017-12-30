@@ -1,10 +1,9 @@
-demo
 node_modules
 .npmrc
 .idea
 .nyc_output
 
-test/config.ts
 src/*.js
 test/*.js
 test-kit/*.js
+empty-epsilon-config.json

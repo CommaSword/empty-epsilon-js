@@ -42,3 +42,4 @@ dist
 .idea
 src/**/*.js
 test/**/*.js
+empty-epsilon-config.json
