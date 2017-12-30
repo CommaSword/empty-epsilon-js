@@ -1,0 +1,43 @@
+{
+  "name": "empty-epsilon-js",
+  "version": "1.0.0",
+  "description": "Empty Epsilon Javascript driver",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc -d",
+    "pretest": "npm run clean && npm run build",
+    "reset": "rimraf node_modules dist && yarn install && yarn test",
+    "test": "mocha --require test-setup.js --reporter list \"dist/test/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CommaSword/empty-epsilon-js.git"
+  },
+  "keywords": [
+    "empty epsilon"
+  ],
+  "author": "Amir Arad <greenshade@gmail.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CommaSword/empty-epsilon-js/issues"
+  },
+  "homepage": "https://github.com/CommaSword/empty-epsilon-js#readme",
+  "devDependencies": {
+    "@types/chai": "~4.0.4",
+    "@types/mocha": "~2.2.41",
+    "@types/node": "8.0.33",
+    "@types/string-template": "^1.0.2",
+    "chai": "~4.1.2",
+    "mocha": "3.2.0",
+    "rimraf": "~2.6.1",
+    "ts-node": "4.1.0",
+    "tslib": "1.8.1",
+    "typescript": "2.6.2"
+  },
+  "dependencies": {
+    "axios": "0.15.3",
+    "string-template": "^1.0.0"
+  }
+}
