@@ -29,7 +29,7 @@ describe('EE HTTP Driver', () => {
         ]);
     }
 
-    it('gets rotation and heading', async function () {
+    it('updates rotation and heading', async function () {
         await expectShipState(httpDriver, 0, 250);
         await setShipState(httpDriver, '0', '122');
         // await ship.setHull(50);

@@ -65,7 +65,7 @@ export interface EEDriver {
 export interface EEDriverWithHooks extends EEDriver {
     /**
      * add a feature to the ship's systems.
-     * it will be exported as  ship:setSystemX and ship:getSystemX where X is the name of the feature
+     * it will be exported as ship:setSystemX and ship:getSystemX where X is the name of the feature
      * @param {string} featureName name of the feature
      * @param {string} updateLogic the effect of the feature in the game loop. will be called with the following variables in the context: ship, system, value, delta
      * @returns {Promise<null>}
@@ -186,6 +186,7 @@ return {${getQueue.map(req => req.luaJSONFields).join(',')}};`;
     }
 
     async exec<T>(script: string): Promise<T> {
+        console.warn('exec is deprecated. write logic in lua instead');
         const res: AxiosResponse = await this.http.request({
             timeout: 3 * 1000,
             method: 'post',
