@@ -9,6 +9,8 @@ export enum ESystem {
     JumpDrive,
     FrontShield,
     RearShield,
+    Docks,
+    Drones,
     COUNT
 }
 
@@ -16,10 +18,12 @@ export const ESystemNames: ReadonlyArray<string> = Array.from(Array(ESystem.COUN
 
 export enum EMissileWeapons {
     None = -1,
-    Homing = 0,
-    Nuke,
-    Mine,
+    Cruise = 0,
+    Torpedo,
+    Heavy,
     EMP,
+    Nuke,
     HVLI,
+    Mine,
     COUNT
 }
