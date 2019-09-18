@@ -14,7 +14,7 @@ export type Config = {
 
 export class ServerManager {
     driver = new HttpDriver(this.config.serverAddress);
-    private serverProcess: ChildProcess;
+    private serverProcess: ChildProcess | null = null;
     private assertServerIsUp = async () => {
         await retry(async () => {
             await this.driver.command('getPlayerShip(-1).foo = {0}', ['123']);
