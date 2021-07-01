@@ -1,5 +1,5 @@
 {
-  "runServer" : "cd c:\\workspace\\EmptyEpsilon-latest-helios && EmptyEpsilon.exe httpserver=8081 headless=scenario_00_basic.lua headless_name=Federation",
+  "runServer" : "cd c:\\workspace\\EmptyEpsilon-latest-helios && EmptyEpsilon.exe httpserver=8081 headless=scenario_00_0_dev.lua headless_name=Federation",
   "killServer" : "taskkill /IM \"EmptyEpsilon.exe\" /F & echo EE server killed",
   "serverAddress" : "http://localhost:8081"
 }

@@ -1,4 +1,5 @@
 import {ChildProcess, exec, execSync} from 'child_process';
+
 import {HttpDriver} from "./driver";
 import {retry} from "./retry";
 
@@ -32,7 +33,7 @@ export class ServerManager {
         this.destroy();
         await new Promise(r => setTimeout(r, killGrace));
         this.serverProcess = exec(this.config.runServer);
-        await this.driver.command('setScenario({0}, {1})', ['"scenario_00_basic.lua"', '"Empty"']);
+        await this.driver.command('setScenario({0}, {1})', ['"scenario_00_0_dev.lua"', '"Empty"']);
         try {
             await this.assertServerIsUp();
         } catch (e) {
@@ -42,7 +43,7 @@ export class ServerManager {
     }
 
     async reset() {
-        await this.driver.command('setScenario({0}, {1})', ['"scenario_00_basic.lua"', '"Empty"']);
+        await this.driver.command('setScenario({0}, {1})', ['"scenario_00_0_dev.lua"', '"Empty"']);
         try {
             await this.assertServerIsUp();
         } catch (e) {
